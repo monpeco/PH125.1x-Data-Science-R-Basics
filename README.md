@@ -29,3 +29,9 @@ https://cran.r-project.org/
 # Installing R on Ubuntu
 
 https://cran.r-project.org/bin/linux/ubuntu/README
+
+---
+
+# Learn Data Science Online
+
+https://www.datacamp.com/
