@@ -140,3 +140,60 @@ https://youtu.be/Rt-P7Xa47qw
 
 ---
 
+#### Section 1: R Basics, Functions, and Data Types   1.1 Motivation   Installing R and R Studio
+
+For this course, you do not need to install R because we're using DataCamp for all of the assignments. You will learn 
+about how to use datacamp's platform next.
+
+### DataCamp
+
+For this course, you do not need to install R because we're using DataCamp for all of the assignments.
+
+To start an assessment, you will click on the button that says Click here to start the assessment, which looks like this: 
+<img style="float: right;" src="https://d37djvu3ytnwxt.cloudfront.net/assets/courseware/v1/7d1f6f458f5f9e0fb9c6c8bd5000880f/asset-v1:HarvardX+PH125.1x+2T2017+type@asset+block/clickhere.png">
+picture of tart the assessment button, and a new tab will open.
+
+The DataCamp interface has four panels. They are:
+
+* **Information Panel**: General information about the assessment.
+* **Instructions Panel**: Exercise instructions. The multiple choice questions appear here when applicable.
+* **The Editor**: Here is where you type and edit your answers in the form of R scripts. Example code also appears here.
+* **R console**: This is where R commands get executed. You can send commands from the editor but you can also type in commands directly to test out code.
+ 
+![datacamp](https://d37djvu3ytnwxt.cloudfront.net/assets/courseware/v1/8e18afc7674384502bf274a38fea17ae/asset-v1:HarvardX+PH125.1x+2T2017+type@asset+block/DataCamp_Platform.png)
+
+There are two ways to send commands from the editor to the console:
+
+1. If your cursor is on the editor and you hit command-return on a Mac or control-return on Windows that line gets executed.
+
+2. If you hit the Submit Answer button, the entire code in the editor gets executed and your answer is evaluated.
+
+To solve the exercises, type code in the editor. If you want to experiment with R code, you can type code into the console. When you click 
+"Submit Answer" you will see that the code is executed in the console. Note that # denotes comments. These are not run as code, instead, 
+they tell others what your code is about! 
+
+And remember, after you click Submit Answer in an assessment, your code will be evaluated. If you do not take the hint, you get unlimited tries.
+
+**Tip**: you can try out code before submitting your answer by either typing into the console or pressing "command + return" (mac) or "ctr + return" (pc).
+
+**Tip**: You can see all keyboard shortcuts after most exercises.
+
+![data-submit](https://d37djvu3ytnwxt.cloudfront.net/assets/courseware/v1/0cc6d8b7237515850ed72fd02b30b26b/asset-v1:HarvardX+PH125.1x+2T2017+type@asset+block/after-you-click-submit-answer--you-will-be-taken-to-the-next-exercise.png)
+
+### Installing R
+
+If you want to install R, so you can also work on your own computer, you can download it freely from the Comprehensive R Archive Network (CRAN). R is often updated and can be installed on multiple operating systems. CRAN includes instructions, but if you need further help, you can try the following resources:
+
+* Installing R on [Windows](https://github.com/genomicsclass/windows#installing-r)
+* Installing R on [Mac](http://youtu.be/Icawuhf0Yqo)
+* Installing R on [Ubuntu](http://cran.r-project.org/bin/linux/ubuntu/README)
+
+
+### RStudio
+
+RStudio is an integrated development environment (IDE). You can install RStudio through the [RStudio website`(https://www.rstudio.com/products/rstudio/download/).
+Their [cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf) is a great resource. 
+
+---
+
+#### Section 1: R Basics, Functions, and Data Types   1.1 Motivation   Using the DataCamp platform
