@@ -197,3 +197,29 @@ Their [cheatsheet](https://www.rstudio.com/wp-content/uploads/2016/01/rstudio-ID
 ---
 
 #### Section 1: R Basics, Functions, and Data Types   1.1 Motivation   Using the DataCamp platform
+
+# Using the DataCamp platform
+
+The Click here to start the how-to button below will open a link to DataCamp, a learn-to-code company 
+that is serving up all of the assignments for Data Science: R Basics. This UNGRADED assignment gets 
+you familiar with the platform.
+
+Once a new window/tab has opened, you will see instructions to the left and the editor to the right, 
+where you can type R code to solve the exercises. Remember the # denotes comments that are not run 
+as code. You can also execute R commands in the console (below the editor). If you want to experiment 
+with R code, type directly into the console. In the course assessments, when you are ready to be graded, 
+type into the editor and hit the 'Submit Answer' button.
+
+By clicking OK, you agree to DataCamp's privacy policy: https://www.datacamp.com/privacy-policy. 
+Note that you might need to disable your pop-up blocker, or allow "www.datacamp.com" in your pop-up 
+blocker allowed list. When you have completed the exercises, return to edX to continue your learning.
+
+### How to use DataCamp (External resource)
+By clicking OK, you agree to DataCamp's privacy policy: https://www.datacamp.com/privacy-policy.
+
+Ask your questions about the DataCamp below! Remember that due to the large number of learners in 
+the course, staff may not be able to respond to every post, so we encourage you to answer each other's questions. One of the best ways to reinforce your own knowledge of a topic is to explain it to someone else! Also please remember not to post your actual code to any of the questions in the discussion forum.
+
+
+---
+
