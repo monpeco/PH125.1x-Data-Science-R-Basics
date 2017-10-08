@@ -296,3 +296,117 @@ button.
 ---
 
 #### Section 1: R Basics, Functions, and Data Types   1.3 Data Types   Data Types
+
+# Data Types
+
+https://youtu.be/n_vt_EQHiYo
+
+> Variables in R can be of different types. For example, we need to
+> distinguish numbers from character strings and tables from simple
+> lists of numbers. The function class helps us determine the type of an
+> object. For example, if I define a is 2 and I look at its class, I
+> will see it's a numeric. Here's another example. Let's look at the
+> class of the function ls. Not surprisingly, we see that it's a
+> function. Up to now, the variables we have defined have been just one
+> number. This is not very useful for storing data. The most common way
+> of storing data sets in R is with data frames. Conceptually, we can
+> think of data frames as tables. Rows represent observations, and
+> different variables are represented by different columns. We're going
+> to see an example soon. Data frames are particularly useful for data
+> sets because we can combine different types into one single object. We
+> store the data for a motivating example in a data frame. You can
+> access this data set by loading the dslabs library, and then after
+> that, loading the murders data set. We do that using the function
+> data. To see that this is, in fact, the data frame, we type class
+> murders, and we see that R tells us that in fact, it is a data frame.
+> This is where the relevant data for answering our questions is stored.
+> So we know our data is stored in the object murders. But what is this
+> object? How can we find out more about this object? The function str
+> is useful for this. str stands for structure, and it shows us the
+> structure of an object. If we type str murders, it shows us that, for
+> example, it's a data frame. It has 51 observations, 51 rows, and five
+> variables. On the left, we can see the variable names, state, abb,
+> which is abbreviation, region, population, and total. So this all
+> makes sense. We can see that this is going to all be useful for
+> answering our questions. We can also show the first six lines of this
+> data frame using the function head. We type head murders, we see
+> Alabama, Alaska, Arizona, Arkansas, California, and Colorado, along
+> with the variables associated with each state. This object follows the
+> convention that we describe. It's quite common in data science. Rows
+> are the different observation, in this case, states. And columns
+> represent different variables. In this case, state, abbreviation,
+> region, population, and total. OK, now we want to start accessing data
+> from this object. So before we go any further in answering our
+> original question about different states, let's get to know the
+> components of this object a little better. For our analysis, we will
+> need to access the different variables represented by columns. To
+> access these variables, we use the dollar sign symbol. It's called the
+> accessor. Here's an example. If I type murders, and then dollar sign,
+> population, it shows us the column associated with the population
+> size. But how did we know how to use the character population? Above,
+> when we used str to reveal the structure of the object, we saw the
+> names of the columns. We can also get the names of the columns using
+> the names function. Names murders tells us the five names of the five
+> columns. So we can see that population is one of those names. So we
+> can use the accessor combined with those names to access any of the
+> columns in the data frame. It is important to know, for the rest of
+> the analysis we're going to do, that the order of the entries in the
+> murders dollar sign population list that we get, it preserves the
+> order of the rows in our data table. As you will see, this will later
+> permit us to manipulate one variable based on the results of another.
+> For example, we might want to manipulate the state names by the number
+> of murders. Note that the object, murders dollar sign population, is
+> not one number. It's 51. We call these types of objects vectors. A
+> single number is technically a vector. But in general, they have
+> several entries. The function length tells you how many. So if I
+> define a new object called pop for population, as the column in the
+> murders data set that has the population sizes, and then I type length
+> pop, I will see that it's a vector with 51 entries, one for each
+> state. This particular vector is a numeric vector since population
+> size, there are numbers. Now let's talk about character vectors. We
+> can store characters in R as well. Because variables also use
+> character strings, we're going to use quotes to distinguish between
+> variable names and character strings. So if I type a and assign 1 to
+> a, the variable a is 1, so if I type a in R, I get back a 1. However,
+> if I want to now work with the character string a, I need to use
+> quotes. So if I write quotes a, then I get back the character string
+> a. An example of a character vector is the column with the state
+> names. So if I grab that column by using the dollar sign and I look at
+> the class of that column, you will see that it's a character. As with
+> numeric vectors, all entries in a character vector need to be a
+> character. Logical vectors or another type of vector. We don't have
+> those in this particular data frame, but we need to mention them.
+> These must be either true or false. So we can create a logical vector
+> by, for example, assigning 3 equal equal to 2 to the object z. When I
+> type z, we see that it's false. That's because 3 is not equal to 2.
+> And if we type class of z, it returns illogical. This is because equal
+> equal is a relational operator asking if 3 is equal to 2. Note that
+> it's different from just one equal, which would assign 2 to 3, which
+> would, of course, give us an error. There's one more data [INAUDIBLE]
+> we want to cover. It's factors. In the murders data set, we have a
+> column called regions. These are the regions of the US, so which state
+> is in which region. We would think that this would be a character,
+> because the regions are things like Northeast and South, et cetera.
+> But when we look at the class of the regions column, we see something
+> new, it says factor. So let's learn about factors, as they appear
+> often in R and in data science. Factors are useful for storing what is
+> called categorical data. The regions are categorical. There is only
+> four categories. Each state is in one of these four. We can see the
+> four levels in this particular factor using the function levels. So we
+> type levels, murders, dollar sign, region, and we see Northeast,
+> South, North Central, and West. So why do we do this? Turns out that
+> saving categorical data this way is more memory efficient. So in R, in
+> the background, we store integers. We store the levels as integers.
+> Technically, integers are smaller memory-wise than characters. So this
+> is what makes it more efficient. However, factors are also a source of
+> confusion, as they can easily be confused with characters. If we just
+> look at this variable, they would appear to be characters. It's only
+> when we ask using class what type it is that we see there are factors.
+> We will learn more about factors in later videos. In general, we
+> recommend avoiding factors as much as possible. Although, as we will
+> learn later, they are sometimes necessary to fit statistical models
+> that depend on categorical data.
+
+---
+
+#### Section 1: R Basics, Functions, and Data Types   1.3 Data Types   Assessment 2
