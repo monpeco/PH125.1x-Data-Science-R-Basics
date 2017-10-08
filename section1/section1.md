@@ -274,3 +274,25 @@ https://youtu.be/XEp2pI02InA
 ---
 
 #### Section 1: R Basics, Functions, and Data Types   1.2 R Basics   Functions
+
+# Functions
+
+https://youtu.be/TjHT0v6i-6k
+
+
+---
+
+#### Section 1: R Basics, Functions, and Data Types   1.2 R Basics   Assessment 1
+
+The button below will open a link to DataCamp, a learn-to-code company that is serving up all of the 
+assignments for Data Science: R Basics. This first assignment teaches you the basics of R.
+
+Once you've opened the new window, you will see instructions to the left and the editor to the right, where 
+you can type R code to solve the exercises. Remember the # denotes comments that are not run as code. You 
+can also execute R commands in the console (below the editor). If you want to experiment with R code, type 
+directly into the console. When you are ready to be graded, type into the editor and hit the 'Submit Answer' 
+button.
+
+---
+
+#### Section 1: R Basics, Functions, and Data Types   1.3 Data Types   Data Types

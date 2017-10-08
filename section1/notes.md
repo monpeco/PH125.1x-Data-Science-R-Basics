@@ -30,3 +30,12 @@ To solve an equation:
     > (-b - sqrt(b^2 - 4*a*c)) / ( 2*a )
     [1] -1.618034
     
+---
+
+#### Section 1: R Basics, Functions, and Data Types   1.2 R Basics   Functions
+
+Evaluate a function with an argument:
+
+    log(8)
+    [1] 2.079442
+    
