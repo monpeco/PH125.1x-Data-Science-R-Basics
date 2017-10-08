@@ -223,3 +223,54 @@ the course, staff may not be able to respond to every post, so we encourage you 
 
 ---
 
+#### Section 1: R Basics, Functions, and Data Types   1.2 R Basics   R Basics
+
+# R Basics
+
+### Objects
+
+https://youtu.be/XEp2pI02InA
+
+> Before we get started with a motivating data set, we
+> need to cover the very basics of R. I'm going to start with objects.
+> And I'm going to use a very simple example here. Suppose a high school
+> student asks us for help solving several quadratic equations of the
+> form ax squared plus bx plus c equals 0. We know the quadratic
+> equation gives us a solution, shown here. One advantage of programming
+> language is that we can define variables and keep such expressions
+> general. So, if we are asked to solve x squared plus x minus 1 equals
+> 0, and we're going to use the quadratic equation, we can define a to
+> be 1, b to be 1, and c to b minus 1. In R, we do that using the
+> assignment symbol, which is less than followed by a minus. Note that
+> it looks like a little arrow. You're assigning 1 to a, you're
+> assigning 1 to b, and you're assigning minus 1 to c. Note that we can
+> also use the equals sign for assignment, but we recommend against it,
+> because using it can cause confusion. Try this out in your console.
+> Try to define a, b, and c in your console. Note that R does not print
+> anything out when you make these assignments. This is good. Had you
+> made a mistake, you would have received an error message. To see the
+> value stored in a, variable we simply type it like this. We type a in
+> the console. And when we hit Return, R shows us the value stored in a,
+> which is 1. A more explicit way to ask R to show us the value that's
+> saved in a variable is to use a print function like this. So we write
+> print parentheses, and inside the parentheses, the object name a. We
+> use the term object to describe stuff that is stored in R. Variables
+> are examples, but objects can also be more complicated entities such
+> as functions, which are described later. As we define objects in the
+> console, we are actually changing what is called the workspace. You
+> can see all the variables saved in your workspace by typing ls(). This
+> is a function that shows you the names of the objects saved in your
+> workspace. If you type it here, you will see as an answer, a, b, and
+> c, the three objects we have defined. IDEs usually have a tab that if
+> you click on it, it actually shows you all these variable names. Now,
+> if you try to recover the value of a variable that is not in your
+> workspace, you'll receive an error. For example, if you type x, which
+> we haven't defined, you will receive an error message that says,
+> "Error: object 'x' not found." Now, since these values are saved in
+> variables, to obtain a solution to our equation, we use the quadratic
+> formula. We type it out in R. We do that, we get 0.61 for the first
+> solution, and negative 1.61 for the second one.
+
+---
+
+#### Section 1: R Basics, Functions, and Data Types   1.2 R Basics   Functions

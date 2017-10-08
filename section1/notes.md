@@ -1,9 +1,11 @@
 #### Section 1: R Basics, Functions, and Data Types   1.2 R Basics   R Basics
 
 Store value in variable:
+
     > a <- 1
 
 See values in the variable:
+
     > a
     [1] 1
 
