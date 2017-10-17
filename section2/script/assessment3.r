@@ -101,3 +101,256 @@ cost[3:5]
 
 # temperatures of the first three cities in the list:
 temp[1:3]
+
+
+
+### Subsetting vectors continued...
+
+# In the previous question, we accessed the temperature for consecutive cities 
+# (1st three). But what if we want to access the temperatures for any 2 specific
+# cities?
+
+# An example: To access the cost of pizza (1st) and pasta (5th food item) in 
+# our list, the code would be:
+
+	cost[c(1,5)]
+
+# Instructions
+# This time we will access our object using just the [ operator. Use the [ operator 
+# to access the temperature of Paris and San Juan already stored in the temp object.
+
+# Access the cost of pizza and pasta from our food list 
+
+	cost[c(1,5)]
+
+# Define temp
+
+	temp <- c(35, 88, 42, 84, 81, 30)
+	city <- c("Beijing", "Lagos", "Paris", "Rio de Janeiro", "San Juan", "Toronto")
+	names(temp) <- city
+
+# Access the temperatures of Paris and San Juan
+
+	temp[c(3,5)]
+
+
+
+### Sequences
+
+# The : operator helps us create sequences of numbers. For example, 32:99 would 
+# create a list of numbers from 32 to 99.
+
+# Then, if we want to know the length of this sequence, all we need to do use the 
+# length command.
+
+# Instructions
+# This time we will use just the : operator. Use the : operator to create a sequence 
+# of consecutive integers starting 12 and ending at 73 and save it in an object x.
+
+
+# Create a vector m of integers that starts at 32 and ends at 99.
+
+	m <- 32:99
+
+# Determine the length of object m.
+
+	length(m)
+
+# Create a vector x of integers that starts 12 and ends at 73.
+
+	x <- 12:73
+
+# Determine the length of object x.
+
+	length(x)
+
+
+
+
+### Sequences continued...
+
+# We can also create different types of sequences in R. For example, in seq(7, 49, 7), 
+# the first argument defines the start, and the second the end. The default is to go 
+# up in increments of 1, but a third argument lets us tell it by what interval.
+
+# Instructions
+# We will learn how to use the seq() function in this question.
+
+# Create a vector containing all the positive odd numbers smaller than 100. The 
+# numbers should be in ascendint order.
+
+
+# Create a vector with the multiples of 7, smaller than 50.
+
+	seq(7, 49, 7) 
+
+# Create a vector containing all the positive odd numbers smaller than 100.
+# The numbers should be in ascending order
+	
+	seq(1,100,2)
+
+
+
+### Sequences and length
+
+# The second argument of the function seq is actually a maximum, not necessarily the 
+# end. So if we type
+
+	seq(7, 50, 7)
+
+# we actually get the same vector of integers as if we type
+
+	seq(7, 49, 7)
+
+# This can be useful because sometimes all we want are sequential numbers that are 
+# smaller than some value.
+
+# Let's look at an example.
+
+# Instructions
+# Create a vector of numbers that starts at 6, does not go beyond 55, and adds 
+# numbers in increments of 4/7. So the first three numbers will be 6, 6+4/7, 
+# and 6+8/7. How many numbers does the list have? Use only one line of code to 
+# answer both questions.
+
+# We can a vector with the multiples of 7, smaller than 50 like this 
+
+	seq(7, 49, 7) 
+
+# But note that the second argument does not need to be last number.
+# It simply determines the maximum value permitted.
+# so the following line of code produces the same vector as seq(7, 49, 7)
+
+	seq(7, 50, 7)
+
+# Create a sequence of numbers from 6 to 55, with 4/7 increments and determine 
+# its length
+
+	length(seq(6,55,4/7))
+
+
+
+
+### Sequences of certain length
+
+# The seq() function has another useful argument. The argument length.out. 
+# This argument lets us generate sequences that are increasing by the same 
+# amount but are of the prespecified length.
+
+# For example, this line of code
+
+	x <- seq(0, 100, length.out = 5)
+
+# produces the numbers 0, 25, 50, 75, 100.
+
+# Let's create a vector and see what is the class of the object produced.
+
+# Instructions
+# Determine the class of a vector generated with seq using the length.out argument.
+# Specifically, what is the class of the following 
+# object a <- seq(1, 10, length.out = 100)?
+
+# Store the sequence in the object a
+
+	a <- seq(1, 10, length.out = 100)
+
+# Determine the class of a
+
+	class(a)
+
+
+
+
+### Integers
+
+# We have discussed the numeric class. We just saw that the seq function can generate 
+# objects of this class. For another example type
+
+	class(seq(1, 10, 0.5))
+	
+# into the console and note that the class is numeric. R has another type of vector 
+# we have not described, the integer class. You can create an integer by adding the 
+# letter L after a whole number. If you type
+
+	class(3L)
+
+# in the console, you see this is an integer and not a numeric. For most practical 
+# purposes, integers and numerics are indistinguishable. For example 3, the integer, 
+# minus 3 the numeric is 0. To see this type this in the console
+
+	3L - 3
+
+# The main difference is that integers occupy less space in the computer memory, so 
+# for big computations using integers can have a substantial impact.
+
+# Instructions
+# Does this change depending on what we store in an object? What is the class of 
+# the following object a <- seq(1, 10)?
+
+# Store the sequence in the object a
+
+	a <- seq(1, 10)
+
+# Determine the class of a
+
+	class(a)
+
+
+
+
+### Integers and Numerics
+
+# Let's confirm that 1L is an integer not a numeric.
+
+# Instructions
+# Confirm that the class of 1 is numeric and the class of 1L is integer.
+
+# Check the class of 1, assigned to the object a
+
+	class(1)
+
+# Confirm the class of 1L is integer
+
+	class(1L)
+
+
+
+
+### Coercion
+
+# The concept of coercion is a very important one. Watching the video, we learned 
+# that when an entry does not match what an R function is expecting, R tries to guess 
+# what we meant before throwing an error. This might get confusing at times.
+
+# As we've discussed in earlier questions, there are numeric and character vectors. 
+# The character vectors are placed in quotes and the numerics are not.
+
+# We can avoid issues with coercion in R by changing characters to numerics and 
+# vice-versa. This is known as typecasting. The code, as.numeric(x) helps us convert 
+# character strings to integers. There is an equivalent function that converts 
+# integers to strings, as.character(x).
+
+# Let's practice doing this!
+
+# Instructions
+# Define the following vector:
+
+	x <- c(1, 3, 5,"a")
+	
+# Notice that x has been coerced into a character string.
+
+# Convert x to a vector of integers using the as.numeric() function.
+
+# Define the vector x
+
+	x <- c(1, 3, 5,"a")
+
+# Note that the x is character vector
+
+	x
+
+# Typecast the vector to get an integer vector
+# You will get a warning but that is ok
+
+	as.numeric(x)
+
