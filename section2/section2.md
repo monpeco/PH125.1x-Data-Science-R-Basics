@@ -94,3 +94,51 @@ https://youtu.be/vJG-7btoYlE
 ---
 
 #### Section 2: Vectors, Sorting   2.1 Vectors   Vector Coercion
+
+https://youtu.be/SpoylOa1GHo
+
+> In general, coercion is an attempt by R to be flexible with data
+> types. When an entry does not match the expected, R tries to guess
+> what we meant before throwing it in there. But this can also lead to
+> confusion. Failing to understand coercion can drive programmers crazy
+> when attempting to code in R, since it behaves quite differently from
+> most other languages. Let's learn about it with some simple examples.
+> We earlier said that vectors must be all of the same type. So if we
+> try to combine say numbers and characters, you might expect an error.
+> But if we type x and assign 1, canada, 3, we don't get an error. We
+> don't even get a warning. So what's happened? Let's look at what x is
+> when we type that. It says quotes 1, quotes canada, quotes 3, has
+> converted the 1 and the 3 to character strings. And the class of x is
+> character. Even though one and 3 were originally numbers when we wrote
+> it out, it has converted them to character. We say that R coerced the
+> data into a character string. It guessed that because we put a
+> character string there in the middle, we meant the 1 and the 3 to
+> actually also be character strings. R also offers functions to force a
+> specific coercion. For example, you can turn numbers into characters
+> with the as.character function. Here's an example. We create a
+> variable x, numbers 1 through 5, and we convert them to characters
+> using the as.character function. Now you can see that y is a list a
+> vector of character strings from 1 to 5. We can turn them back using
+> the as.numeric function, which converts characters or other data types
+> into numeric variables. This function is actually quite useful in
+> practice, because many datasets, many public datasets that include
+> numbers, include them in a form that makes them appear to be character
+> strings. Missing data is very common in practice. In R, we have a
+> special value for missing data. It's the NA. We can get to NA's from
+> coercion. For example, when R fails to coerce something, it tries to
+> coerce but it can't, we will get NA. Here's an example. Suppose we
+> define a object of character strings 1, b, 3, and we want to convert
+> them to numbers, R will be able to get them to 1 and the 3 to the
+> numeric values 1, 3. But it won't know what to do with b. So if you
+> call as.numeric on this vector, we get a warning. It says NA's
+> introduced by coercion. And the answer is the number one, a missing
+> value, and then the number 3. R does not have any guesses of what to
+> do. So instead of converting b to a number, it tells us it's an NA.
+> Note that, as a data scientist, you will encounter the NA often, as
+> they are used as missing data. And as I said, this is a very common
+> problem in real life data sets. So be sure to know what NA means. And
+> be ready to see a lot of them.
+
+---
+
+#### 
