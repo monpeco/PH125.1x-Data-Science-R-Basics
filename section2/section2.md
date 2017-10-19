@@ -141,4 +141,79 @@ https://youtu.be/SpoylOa1GHo
 
 ---
 
-#### 
+#### Section 2: Vectors, Sorting   2.2 Sorting   Sorting
+
+https://youtu.be/hvYVm1-qcgU
+
+> Now that we have some basic R knowledge under our belt, let's try to
+> gain some insights into the safety of different states in the context
+> of gun murders. We want to rank the states from least to most
+> dangerous. The function sort, sorts the vector in increasing order. So
+> we can see the largest total number of gun murders by simply typing
+> sort, and then murders$total. And we can see that the state with the
+> smallest number of murders had 2, and the one with the most had 1,257.
+> However, this does not give us any information about the states, only
+> about the totals. The function order is closer to what we want. It
+> takes a vector and returns the indices that sorts that vector. This
+> may sound confusing, so let's look at a simple example. Consider this
+> very simple vector of five numbers-- 31, 4, 15, 92, and 65. If I type
+> sort, it puts them in order-- 4, 15, 31, 65, 92. Rather than sort the
+> vector, the function order gives us back the index that if used to
+> index the vector, will sort it. So if I type index, and I assign order
+> of x, now if I index x by that index, I get back the sorted numbers.
+> If you look at the object index, we see why it works. Look at x-- 31,
+> 4, 15, 92, 65. If I type order x, I get 2, 3, 1, 5, 4. This is the
+> index that puts x in order. 2 is the first entry because the second
+> entry of x is 4, which is the smallest number. The second smallest is
+> 15, which is in the third location. So 3 is the second entry of order
+> x, et cetera. So how does this help us order the states by murderers?
+> First, remember that the entries of vectors you accessed with the
+> dollar sign follow the same order as the rows in the table. So for
+> example, these two vectors containing the state names and state
+> abbreviations respectively, match their order. We only show the first
+> entries so that it fits on the screen, but notice that we have
+> Alabama, Alaska, Arizona, et cetera, and in the other one, we have AL,
+> AK, AZ. Those are the abbreviations that goes with those three states.
+> If you look through all 10, you see that they match. This means we can
+> now order the state names by their total murders by first obtaining
+> the index that orders according to murder totals, and then indexing
+> the state names or abbreviations using that index. Let's type it here.
+> Let's define index with the order of the totals, and then index the
+> murders abbreviations to see the states ordered by murder totals. We
+> see that Vermont has the lowest total and California has the most
+> murders. Now, there's actually a much faster way of doing this, of
+> getting the biggest or the smallest. If we are only interested in the
+> entry with the largest value, we can use the function max. So max of
+> the murders total gives us 1,257, the largest number. And which max
+> gives us the index where this number resides. So if I define i_max as
+> which.max of the murders total, I get back the index for which that
+> value is 1,257, and now I can index the state names, and get back the
+> answer which we were looking for. California is the state with the
+> largest number of total murders. For the minimum, we can do the same
+> with min and which.min. So is California the most dangerous state? In
+> the next section, we argue that we should be considering rates, not
+> total. But before doing that, we introduce one last order related
+> function-- rank. For any given list, it gives you a vector with the
+> rank of the first entry, second entry, et cetera. Here's a simple
+> example. Let's look at that vector we defined earlier-- 31, 4, 15, 92
+> 65. If I type rank of x, I get back 3, 1, 2, 5, 4. Why? Because 31, the first entry of x, is the third smallest value in x. 4 is the
+> smallest, so that one gets a 1. 15 is the second smallest, so it gets
+> a 2, et cetera. To summarize, let's look at the results of the three
+> functions we have introduced. In the first column of this table, we
+> have the original vector-- 31, 4, 15, 92, 65. In the second column, we
+> have the result of sort. In the third column, we have the result of
+> order, and in the fourth column, we have the result of rank. Notice
+> that the sort column simply has the original sorted. So we have the
+> values going from the smallest to the biggest. Order, again, gives us
+> the index needed to obtain the sorted data. So because in the sort
+> column, the first entry is a 4, in order, we have 2. Why? Because if
+> we go to the original, we need to go to the second entry to get that
+> 4. In the second row of order, we have a 3. Why? Because to get a 15, the second smallest, we need to go to the third column of the original
+> to get 15. Et cetera. Now, the final column rank, gives us the ranks
+> of the original vector. 31 is the third smallest, 4 is the smallest,
+> 15 is the second smallest, et cetera. All right, now that we have
+> learned about sorting in R, we have some useful tools to answer
+> questions about the data at hand.
+
+---
+
