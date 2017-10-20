@@ -57,3 +57,85 @@ o <- order(pop)
 # Find the index number of the entry with the smallest population size
 o[1]
 
+
+
+
+
+### New Codes
+
+# We can actually perform the same operation as in the previous exercise using 
+# the function which.min. It basically tells us which is the minimum value.
+
+# Instructions
+# Write one line of code that gives the index of the lowest population entry. Use the which.min command.
+
+# Find the smallest value for variable total 
+which.min(murders$total)
+
+# Find the smallest value for population
+which.min(murders$population)
+
+
+
+### Using the output of order
+
+# Now we know how small the smallest state is and we know which row represents it. 
+# However, which state is it?
+
+# Instructions
+# Find the index of the smallest state using which.min(murders$population).
+# Define a variable states to hold the state names from the murders data frame.
+# Combine these to find the state name for the smallest state.
+
+# Define the variable i to be the index of the smallest state
+i <- which.min(murders$population)
+
+# Define variable states to hold the states
+states <- murders$state
+
+# Use the index you just defined to find the state with the smallest population
+states[i]
+
+
+
+
+
+### Ranks
+
+# You can create a data frame using the data.frame function. Here is a quick example:
+
+temp <- c(35, 88, 42, 84, 81, 30)
+city <- c("Beijing", "Lagos", "Paris", "Rio de Janeiro", "San Juan", "Toronto")
+city_temps <- data.frame(name=city, temperature=temp)
+city_temps
+#            name temperature
+#1        Beijing          35
+#2          Lagos          88
+#3          Paris          42
+#4 Rio de Janeiro          84
+#5       San Juan          81
+#6        Toronto          30
+
+# Instructions
+# Define a variable states to be the state names from murders
+# Use rank(murders$population) to determine the population size rank (from smallest to biggest) of each state.
+# Save these ranks in an object called ranks.
+# Create a data frame with state names and their respective ranks. Call the data frame 
+
+# Store temperatures in an object 
+temp <- c(35, 88, 42, 84, 81, 30)
+
+# Store city names in an object 
+city <- c("Beijing", "Lagos", "Paris", "Rio de Janeiro", "San Juan", "Toronto")
+
+# Create data frame with city names and temperature 
+city_temps <- data.frame(name = city, temperature = temp)
+
+# Define a variable states to be the state names 
+states <- murders$state
+
+# Define a variable ranks to determine the population size ranks 
+ranks <- rank(murders$population)
+
+# Create a data frame my_df with the state name and its rank
+my_df <- data.frame(name=states, rank=ranks)
