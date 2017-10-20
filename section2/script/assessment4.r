@@ -160,11 +160,94 @@ my_df <- data.frame(name=states, rank=ranks)
 # Define a variable states to be the state names from the murders data frame
 states <- murders$state
 
+states
+ [1] "Alabama"              "Alaska"               "Arizona"             
+ [4] "Arkansas"             "California"           "Colorado"            
+ [7] "Connecticut"          "Delaware"             "District of Columbia"
+[10] "Florida"              "Georgia"              "Hawaii"              
+[13] "Idaho"                "Illinois"             "Indiana"             
+[16] "Iowa"                 "Kansas"               "Kentucky"            
+[19] "Louisiana"            "Maine"                "Maryland"            
+[22] "Massachusetts"        "Michigan"             "Minnesota"           
+[25] "Mississippi"          "Missouri"             "Montana"             
+[28] "Nebraska"             "Nevada"               "New Hampshire"       
+[31] "New Jersey"           "New Mexico"           "New York"            
+[34] "North Carolina"       "North Dakota"         "Ohio"                
+[37] "Oklahoma"             "Oregon"               "Pennsylvania"        
+[40] "Rhode Island"         "South Carolina"       "South Dakota"        
+[43] "Tennessee"            "Texas"                "Utah"                
+[46] "Vermont"              "Virginia"             "Washington"          
+[49] "West Virginia"        "Wisconsin"            "Wyoming"  
+
 # Define a variable ranks to determine the population size ranks 
 ranks <- rank(murders$population)
+
+ranks
+ [1] 29  5 36 20 51 30 23  7  2 49 44 12 13 47 37 22 19 26 27 11 33 38 43 31 21
+[26] 34  8 14 17 10 41 16 48 42  4 45 24 25 46  9 28  6 35 50 18  3 40 39 15 32
+[51]  1
 
 # Define a variable ind to store the indexes needed to order the population values
 ind <- order(murders$population)
 
+ind
+ [1] 51  9 46 35  2 42  8 27 40 30 20 12 13 28 49 32 29 45 17  4 25 16  7 37 38
+[26] 18 19 41  1  6 24 50 21 26 43  3 15 22 48 47 31 34 23 11 36 39 14 33 10 44
+[51]  5
+
 # Create a data frame my_df with the state name and its rank and ordered from least populous to most 
 my_df <- data.frame(name=states[ind], rank=ranks[ind])
+
+                   name rank
+1               Wyoming    1
+2  District of Columbia    2
+3               Vermont    3
+4          North Dakota    4
+5                Alaska    5
+6          South Dakota    6
+7              Delaware    7
+8               Montana    8
+9          Rhode Island    9
+10        New Hampshire   10
+11                Maine   11
+12               Hawaii   12
+13                Idaho   13
+14             Nebraska   14
+15        West Virginia   15
+16           New Mexico   16
+17               Nevada   17
+18                 Utah   18
+19               Kansas   19
+20             Arkansas   20
+21          Mississippi   21
+22                 Iowa   22
+23          Connecticut   23
+24             Oklahoma   24
+25               Oregon   25
+26             Kentucky   26
+27            Louisiana   27
+28       South Carolina   28
+29              Alabama   29
+30             Colorado   30
+31            Minnesota   31
+32            Wisconsin   32
+33             Maryland   33
+34             Missouri   34
+35            Tennessee   35
+36              Arizona   36
+37              Indiana   37
+38        Massachusetts   38
+39           Washington   39
+40             Virginia   40
+41           New Jersey   41
+42       North Carolina   42
+43             Michigan   43
+44              Georgia   44
+45                 Ohio   45
+46         Pennsylvania   46
+47             Illinois   47
+48             New York   48
+49              Florida   49
+50                Texas   50
+51           California   51
+
