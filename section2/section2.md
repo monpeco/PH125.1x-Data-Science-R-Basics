@@ -217,3 +217,55 @@ https://youtu.be/hvYVm1-qcgU
 
 ---
 
+#### Section 2: Vectors, Sorting   2.3 Vector Arithmetic   Vector Arithmetic
+
+# Vector Arithmetic
+
+https://youtu.be/M_gjIdQWxWQ
+
+
+    > murders$state[which.max(murders$population)]
+    [1] "California"
+    > max(murders$population)
+    [1] 37253956
+    
+    > heights <- c(69,68,62,50,71,91)
+    > heights
+    [1] 69 68 62 50 71 91
+    
+    > heights * 2.54
+    [1] 175.26 172.72 157.48 127.00 180.34 231.14
+
+    > heights - 69
+    [1]   0  -1  -7 -19   2  22
+    
+    > murder_rate <- murders$total / murders$population * 10000
+    > murder_rate
+     [1] 0.28244238 0.26751860 0.36295273 0.31893901 0.33741383 0.12924531
+     [7] 0.27139722 0.42319369 1.64527532 0.33980688 0.37903226 0.05145920
+    [13] 0.07655102 0.28369608 0.21900730 0.06893484 0.22081106 0.26732010
+    [19] 0.77425810 0.08280881 0.50748655 0.18021791 0.41786225 0.09992600
+    [25] 0.40440846 0.53598917 0.12128379 0.17521372 0.31104763 0.03798036
+    [31] 0.27980319 0.32537239 0.26679599 0.29993237 0.05947151 0.26871225
+    [37] 0.29589340 0.09396843 0.35977513 0.15200933 0.44753235 0.09825837
+    [43] 0.34509357 0.32013603 0.07959810 0.03196211 0.31246001 0.13829942
+    [49] 0.14571013 0.17056487 0.08871131
+
+    > murders$state[order(murder_rate, decreasing=TRUE)]                                                                                                                                                         
+     [1] "District of Columbia" "Louisiana"            "Missouri"            
+     [4] "Maryland"             "South Carolina"       "Delaware"            
+     [7] "Michigan"             "Mississippi"          "Georgia"             
+    [10] "Arizona"              "Pennsylvania"         "Tennessee"           
+    [13] "Florida"              "California"           "New Mexico"          
+    [16] "Texas"                "Arkansas"             "Virginia"            
+    [19] "Nevada"               "North Carolina"       "Oklahoma"            
+    [22] "Illinois"             "Alabama"              "New Jersey"          
+    [25] "Connecticut"          "Ohio"                 "Alaska"              
+    [28] "Kentucky"             "New York"             "Kansas"              
+    [31] "Indiana"              "Massachusetts"        "Nebraska"            
+    [34] "Wisconsin"            "Rhode Island"         "West Virginia"       
+    [37] "Washington"           "Colorado"             "Montana"             
+    [40] "Minnesota"            "South Dakota"         "Oregon"              
+    [43] "Wyoming"              "Maine"                "Utah"                
+    [46] "Idaho"                "Iowa"                 "North Dakota"        
+    [49] "Hawaii"               "New Hampshire"        "Vermont"
