@@ -288,3 +288,34 @@ ind <- is.na(na_example)
 # Determine how many NA ind has using the sum function
 sum(ind)
 
+
+
+
+### Removing NAs
+
+# We previously computed the average of na_example using mean(na_example) and obtain NA. 
+# This is because the function mean returns NA if it encounters at least one NA. 
+# A common operation is therefore removing the entries that are NA and after that 
+# perform operations on the rest.
+
+# Instructions
+# Write one line of code to compute the average, but only for the entries that are 
+# not NA making use of the ! operator before ind
+
+# Note what we can do with the ! operator
+x <- c(1, 2, 3)
+ind <- c(FALSE, TRUE, FALSE)
+x[!ind]
+
+# Create the ind vector
+library(dslabs)
+data(na_example)
+ind <- is.na(na_example)
+
+# We saw that this gives an NA
+mean(na_example)
+
+# Compute the average, for entries of na_example that are not NA 
+mean(na_example[!ind])
+
+
