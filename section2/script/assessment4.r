@@ -251,3 +251,40 @@ my_df <- data.frame(name=states[ind], rank=ranks[ind])
 50                Texas   50
 51           California   51
 
+
+
+### NA
+
+# The na_example dataset represents a series of counts. It is included in the dslabs package. You can quickly 
+# examine the object using
+
+library(dslabs)
+data(na_example)
+str(na_example)
+
+# However, when we compute the average we obtain an NA. You can see this by typing
+
+mean(na_example)
+
+# Instructions
+# The is.na returns a logical vector that tells us which entries are NA. Assign the logical vector 
+# that is returned by is.na(na_example) to an object called ind.
+# Determine how many NAs na_example has, using the sum command.
+
+
+# Using new dataset 
+library(dslabs)
+data(na_example)
+
+# Checking the structure 
+str(na_example)
+
+# Find out the mean of the entire dataset 
+mean(na_example)
+
+# Use is.na to create a logical index ind that tells which entries are NA
+ind <- is.na(na_example)
+
+# Determine how many NA ind has using the sum function
+sum(ind)
+
