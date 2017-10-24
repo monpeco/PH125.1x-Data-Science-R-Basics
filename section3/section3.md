@@ -98,3 +98,83 @@ The five states are Hawaii, Idaho, Oregon, Utah, and Wyoming.
 So now we have five states to pick for where we're going to move from Italy.
 
 ---
+
+#### Section 3: Indexing, Data Wrangling, Plots   3.1 Indexing   Indexing Functions
+
+# Indexing Functions
+
+https://youtu.be/Z0lKp9QoWhY
+
+RAFAEL IRIZARRY: In this video, we introduce three very useful functions
+related to indexing that use logical operators.
+They are which, match, and %in%.
+Which gives us the entries of a logical vector that are true.
+Here's an example.
+If I define x as the vector, FALSE, TRUE, FALSE, TRUE, TRUE, FALSE,
+which of x gives us to 2,4,5.
+Those are the indices of x that are true.
+This can be useful, for example, when the logical vector that we
+want to use to index is very long and we only want it for indexing,
+so we can just keep the actual indices, not the entire vector of logicals.
+As an example, suppose we want to look up Massachusetts' murder rate.
+The function, which, tells us which entries have a logical vector are true.
+So we can type index which, state equals Massachusetts.
+And now index will be 22.
+That's because that's the only entry that was true.
+That's Massachusetts entry.
+So now to get the murder rate, we simply index the murder rate value.
+And we get that it's 1.8, a pretty low murder rate compared to other states.
+Now, we don't need to use which for what we just did.
+We could have just used the logic vector.
+However, it makes index a much smaller object.
+Next function we're going to look at his match.
+Match looks for entries in a vector and returns
+the index needed to access them.
+Suppose that instead of one state, we want
+to find out the murder rate for several states,
+say New York, Florida, and Texas.
+Here we can use match.
+Let's look at an example.
+This function tells us which indices of the second vector
+match each of the entries of a first vector.
+So here it is.
+We say match, New York, Florida, Texas.
+And then the second vector are the state names.
+So index is going to be 33.
+That's the index that matched New York, 10 the index that matched Florida,
+and 44, the index that matched Texas.
+So now to confirm that we did this right, we can simply type murder state,
+use the index, and see that we actually got the three states we
+wanted, New York, Florida, and Texas.
+And now we're can also look at the murder rates of these three
+states, which are 2.66, 3.4, and 3.2.
+The last function we're going to look at is perhaps the most useful.
+And it's the %in% operator.
+If rather than an index, we want to know whether or not each element of a first
+vector is in a second vector, we use the function %in%.
+Here's a simple example.
+Let's define the object x as the first five letters, a through e.
+And let's define y as a, d, and f.
+If I ask y %in% x, I get back TRUE, TRUE, FALSE.
+This is because a, the letter a, is in the object x.
+The letter d is in the object x But the letter f is not.
+So we get a false.
+So, say you are not sure of Boston, Dakota, and Washington are state's.
+And you want to find out.
+Here's a simple way you can do it.
+You type Boston, Dakota, Washington and check
+to see if they're in the state vector.
+And you can see that Boston is not a state.
+Dakota is not a state.
+But Washington is.
+We will be using these functions often as subsetting
+data sets into different strata is a very common task in data science.
+You will commonly be asked to look at subsets
+of the data for this country or that country, this sector or that sector,
+etc.
+So make sure to familiarize yourself with these powerful tools.
+
+
+---
+
+
