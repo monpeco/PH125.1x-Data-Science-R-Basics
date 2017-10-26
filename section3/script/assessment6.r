@@ -172,3 +172,69 @@ ind <- match(abbs, murders$abb)
 murders$state[ind]
 
 
+
+
+### %in%
+
+# If rather than an index we want a logical that tells us whether or not 
+# each element of a first vector is in we can use the function %in%. 
+# For example:
+
+x <- c(2, 3, 5)
+y <- c(1, 2, 3, 4)
+x%in%y
+
+# Gives us a two TRUE followed by a FALSE because 2 and 3 are in y.
+
+# Instructions
+# Which of the following are actual abbreviations: MA, ME, MI, MO, MU?
+
+# Define a character vector with the abbreviations MA, ME, MI, MO, MU.
+# Use the % operator to create a logical vectors that is TRUE when the 
+# abbreviation is in murders$abb.
+
+# Store the 5 abbreviations in `abbs`. (remember that they are character vectors)
+
+> abbs <- c("MA", "ME", "MI", "MO", "MU")
+> abbs
+[1] "MA" "ME" "MI" "MO" "MU"
+
+
+# Use the %in% command to check if the entries of abbs are abbreviations 
+# in the the murders data frame
+
+> abbs%in%murders$abb
+[1]  TRUE  TRUE  TRUE  TRUE FALSE
+
+
+
+
+
+### Logical operator
+
+# Instructions
+# We are again working with the characters 
+# abbs <- c("MA", "ME", "MI", "MO", "MU")
+
+# In a previous exercise we computed the index abbs%in%murders$abb. Use which 
+# and the ! operator to get the index of the entries of abbs that are not 
+# abbreviations.
+# Show the entries of abbs that are not actual abbreviations.
+
+# Store the 5 abbreviations in abbs. (remember that they are character vectors)
+
+abbs <- c("MA", "ME", "MI", "MO", "MU")
+ 
+# Use the `which` command and `!` operator to find out which abbreviation are 
+# not actually part of the dataset and store in ind
+
+> ind <- which(!abbs%in%murders$abb)
+> ind
+[1] 5
+
+# What are the entries of abbs that are not actual abbreviations
+
+> abbs[ind]
+[1] "MU"
+
+
