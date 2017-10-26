@@ -119,3 +119,56 @@ low <- murder_rate < 1
 
 > murders$state[ind]
 [1] "Maine"         "New Hampshire" "Vermont"  
+
+
+
+
+### Filtering continued
+
+# Instructions
+# In a previous exercise we computed the murder rate for each 
+# state and the average of these numbers.
+
+# How many states are below the average?
+
+# Store the murder rate per 100,000 for each state, in murder_rate
+
+murder_rate <- murders$total/murders$population*100000
+
+# Compute average murder rate and store in avg using `mean` 
+
+> avg <- mean(murder_rate)
+> avg
+[1] 2.779125
+
+# How many states have murder rates below avg ? Check using sum 
+
+> sum(murder_rate < avg)
+[1] 27
+
+
+
+
+
+### Match
+
+# In this exercise we use the match function to identify the states with abbreviations AK, MI, and IA.
+
+# Instructions
+# Define a character vector with the abbreviations.
+# Start by defining an index of the entries of murders$abb that match the three abbreviations.
+# Use the [ operator to extract the states.
+
+# Store the 3 abbreviations in abbs in a vector (remember that they are character vectors and need quotes)
+
+abbs <- c("AK","MI","IA")
+
+# Match the abbs to the murders$abb and store in ind
+
+ind <- match(abbs, murders$abb)
+
+# Print state names from ind
+
+murders$state[ind]
+
+
