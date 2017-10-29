@@ -51,3 +51,13 @@ index
 > murders$state[index]
 [1] "Hawaii"  "Idaho"   "Oregon"  "Utah"    "Wyoming"
 
+
+
+###########
+# Install 
+install.packages("dplyr")
+
+library(dplyr)
+
+
+library(dplyr)
