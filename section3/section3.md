@@ -286,3 +286,26 @@ function assumes that whatever is being piped is what should be operated on.
 ---
 
 
+#### Section 3: Indexing, Data Wrangling, Plots   3.2 Basic Data Wrangling   Creating Data Frames
+
+# Creating Data Frames
+
+RAFAEL IRIZARRY: For many of the analyses we perform with [? D ?]
+[? plotter, ?] we will find it necessary to create data frames in R.
+You can do this using the data.frame function.
+Here's an example.
+We're creating an object called grades.
+We're adding names and the scores of exam_1 and exam_2.
+You specify the column name and then the entry for that column name,
+as we see here.
+Now, be warned, by default, data-frame turns characters into factors.
+For example, let's look at the class of grades$names.
+It's a factor.
+To avoid this, we use the rather cumbersome argument stringsAsFactors--
+one word-- in the following way.
+We rewrite the whole thing.
+But at the end, we define this special argument,
+stringsAsFactors equals FALSE.
+And when we do it this way, now the characters
+stay characters, as we can see by looking at the class of grades.names.
+Now in this case, it is a character.

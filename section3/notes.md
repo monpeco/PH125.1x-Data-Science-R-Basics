@@ -103,3 +103,30 @@ library(dplyr)
 3 New Hampshire     Northeast 0.3798036
 4  North Dakota North Central 0.5947151
 5       Vermont     Northeast 0.3196211
+
+
+
+########
+
+> grades <- data.frame(names=c("John", "Juan", "Jean", "Yao"), 
+                        exam_1=c(95,80,90,85), 
+                        exam_2=c(90,85,85,90))                                                                                                 
+> grades
+  names exam_1 exam_2
+1  John     95     90
+2  Juan     80     85
+3  Jean     90     85
+4   Yao     85     90
+
+> class(grades$names)
+[1] "factor"
+
+
+> grades <- data.frame(names=c("John", "Juan", "Jean", "Yao"), 
+                                exam_1=c(95,80,90,85), 
+                                exam_2=c(90,85,85,90), 
+                                stringsAsFactors = FALSE)                                                                       
+
+> class(grades$names)
+[1] "character"
+
