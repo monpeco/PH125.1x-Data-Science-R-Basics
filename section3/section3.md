@@ -309,3 +309,80 @@ stringsAsFactors equals FALSE.
 And when we do it this way, now the characters
 stay characters, as we can see by looking at the class of grades.names.
 Now in this case, it is a character.
+
+
+
+---
+
+#### Section 3: Indexing, Data Wrangling, Plots   3.3 Basic Plots   Basic Plots
+
+# Basic Plots
+
+RAFAEL IRIZARRY: Exploratory data visualization
+is perhaps the main strength of R. One can quickly
+go from idea to data to plot with a unique balance of flexibility and ease.
+For example, Excel may be easier than R, but it is nowhere as near as flexible.
+D3, an interactive data visualization programming language,
+may be more flexible and powerful than R,
+but it takes much longer to generate a plot.
+Let's use our US murders example.
+Earlier we infer that states with larger populations
+are likely to have more murders.
+This can be quickly confirmed with an exploratory visualization that
+plots these two quantities against each other.
+So here's how we do it in R. We define two objects, population_in_millions
+and total_gun_murders, and then simply plot them against each other using
+the function plot.
+And we can immediately see that there's a strong relationship
+between population and total gun murders.
+One goes up with the other.
+Another example of a plot we can quickly make are histograms.
+We will describe histograms in detail later in the series.
+Here we will simply note that histograms are powerful graphical summaries
+of a list of numbers that gives you a general overview of the types of values
+you have.
+We can make a history of our murder rates by simply typing hist
+murders$rate.
+And we can see the distribution of the data.
+We can see that there's a wide range of values of most of them
+between two and three, and one very extreme case with a murder
+rate of more than 15.
+If we want to find out which one this is,
+we can use the code that we've learned to write and see
+that it's the District of Columbia.
+Finally, let me show you some box plots.
+Box plots will be described in more detail later in the series as well.
+But here, we say that box plots provide a more terse summary
+than the histogram, but they're easier to stack against each other.
+So we can see many distributions in one plot.
+Here we use them to compare the murder rates for different regions.
+And we can see by quickly looking at this plot
+that the South has the highest murder rate of all regions.
+Here we have just shown you a very small fraction
+of what is possible with R for data exploration and plotting.
+We have an entire course dedicated to data visualization.
+There you will learn about the very powerful ggplot2 package.
+It will be in that course that you will be
+able to fully appreciate the power of R when it comes to data visualization.
+
+
+```r
+population_in_millions <- murders$population/10
+
+total_gun_murders <- murders$total
+ 
+plot(population_in_millions, total_gun_murders)
+```
+
+![plot](https://user-images.githubusercontent.com/16638078/32202987-4e144434-bdbf-11e7-9543-ffd725122bb8.png)
+
+```r
+hist(murders_rate)
+```
+
+![hist](https://user-images.githubusercontent.com/16638078/32203038-9be4e506-bdbf-11e7-9654-9b13bdeef39c.png)
+
+```r
+boxplot(rate~region, data=murders)
+```
+![boxplot](https://user-images.githubusercontent.com/16638078/32203055-b8f8aaf6-bdbf-11e7-8d43-e657e248d582.png)
