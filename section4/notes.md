@@ -44,3 +44,58 @@ all(z)
 z <- c(TRUE, TRUE, TRUE)
 all(z)
 
+
+
+
+#### basic functions
+
+
+avg <- function(x){
+  s <- sum(x)
+  n <- length(x)
+  s/n
+}
+
+> avg(c(1,2,3))
+
+[1] 2
+
+
+> x <- 1:100
+
+> avg(x)
+
+[1] 50.5
+
+
+> identical(mean(x), avg(x))
+
+[1] TRUE
+
+
+# lexical scope
+
+
+
+# multiple arguments
+
+my_func <- function(x,y,z){
+opetarions that operate on x,y,z
+value final line is returned
+}
+
+
+
+avg <- function(x, arithmetic=TRUE){
+n <- length(x)
+ifelse(arithmetic, sum(x)/n, prod(x)^(1/n))
+}
+
+> avg(x)
+
+[1] 50.5
+
+
+> avg(x,FALSE)
+
+[1] 37.99269
