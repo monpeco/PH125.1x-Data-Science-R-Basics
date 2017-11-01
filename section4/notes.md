@@ -99,3 +99,33 @@ ifelse(arithmetic, sum(x)/n, prod(x)^(1/n))
 > avg(x,FALSE)
 
 [1] 37.99269
+
+
+
+
+
+### for
+computes_s_n <- function(n){
+  x <- 1:n
+  sum(x)
+}
+
+
+# general form
+
+for (i in range of values){
+  operations that use i,
+  which is changing across
+  the range of values
+}
+
+m <- 25
+
+# create an empty vector
+s_n <- vector(length=m)
+
+for(n in 1:m){
+  s_n[n] <- computes_s_n(n)
+  plot(n,s_n[n])
+}
+
