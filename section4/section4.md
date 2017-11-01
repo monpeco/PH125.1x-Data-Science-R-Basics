@@ -312,3 +312,27 @@ as we face more and more complex tasks.
 
 ---
 
+#### Section 4: Programming Basics   4.4 For Loops   Other Functions
+
+# Other Functions
+
+RAFAEL IRIZARRY: In a previous video, we introduced for loops,
+but it turns out that we rarely use them in R.
+This is because there are usually more powerful ways to perform the same task.
+But the concept is still important, so it's good that we covered for loops.
+Functions that are typically used instead of for loops in R
+are apply, sapply, tapply, and mapply.
+These are part of what we call the apply family.
+We do not cover these functions in this course,
+but they are worth learning if you intend to go beyond this introduction.
+Other functions that are widely used are split, cut, quantile, reduce,
+identical, unique, and many others.
+There are many ways you can learn about this.
+And you should learn to use the web to find out about what they do
+and when to use them.
+
+
+Tags: `apply`,`sapply`,`tapply`,`mapply`,`split`,`cut`,`quantile`,`reduce`,`identical`,`unique`
+
+
+------
