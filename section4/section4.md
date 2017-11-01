@@ -164,3 +164,76 @@ I get a TRUE, because they're all true.
 ---
 
 #### Section 4: Programming Basics   4.3 Functions   Functions
+
+# Basic Functions
+
+RAFAEL IRIZARRY: As you become more experienced,
+you'll find yourself needing to perform the same operation over and over.
+A simple example of this is computing the average.
+You compute the average all the time when you're doing data science.
+You can compute the average of a vector x by computing the sum
+and then dividing by the length.
+This is longer than it really needs to be,
+because we can define a function that does this automatically.
+Because we do this so often, it's more efficient to write a function that
+performs this operation.
+And this has already been done.
+This is what the mean function does in R.
+However, you will encounter situations in which the function that you need
+does not already exist.
+So you have to write your own.
+A simple version of a function that computes the average
+can be defined like this.
+We use this as an example, so you'll learn how to write functions.
+So we're going to write a new function called avg, stands for average.
+It takes x, computes the sum, assigns it to s, computes the length,
+assigns it to n.
+And then the last line inside the function brackets, s divided by n,
+is what is returned.
+So if I type average and then give it a vector,
+I will get back the sum divided by the length, which is the average.
+Now average is a function that computes the mean.
+So we can show that it gives you the same answer as a mean,
+using the identical function.
+Note that variables defined inside a function
+are not saved in the workspace.
+So while wi use s and n inside the average call,
+the values are created and change only during the call.
+So if I define a function like we did before,
+but I define s equals 3 and then call average, inside of average,
+an s is created that is not 3, it's something else.
+And it's assigned to s, but that only happens inside the function.
+If I type s after calling average, I get back
+3, the value that I defined outside of the function.
+So the general way to define functions is as follows.
+You decide on a name that will be an object.
+Here I'm using my_function.
+Then you type the function function, is what
+lets R know that you are defining a function.
+I have the arguments inside parentheses.
+And then with brackets, I put all the operations
+that operate on x, which is defined by the user when they call this function.
+Note that functions are objects.
+So we assign them to variable names with the arrow operator.
+The R function, called function, tells R you're about to define a new function.
+Note that functions can have more than one variable.
+The way you define them is by having multiple arguments.
+In this example, I have x, y, and z.
+Now the operations inside the brackets operate
+with the x, y, and z defined by the user that's calling your function.
+For example, we can define a function that
+computes either the arithmetic or geometric average depending
+on a user-defined variable like this.
+Notice that arithmetic has a default value of true,
+but the user, when they call your new function,
+can change it to true or to false.
+Once that's done, you'll see that the last argument, the argument that
+defines what's returnhed, uses an if else statement,
+which returns either the arithmetic or the geometric mean,
+depending on what the value of arithmetic is.
+We will learn more about how to create functions through experience
+as we face more and more complex tasks.
+
+---
+
+#### Section 4: Programming Basics   4.4 For Loops   For Loops
