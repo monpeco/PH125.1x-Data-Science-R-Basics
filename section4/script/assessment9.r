@@ -200,5 +200,65 @@ for (i in 1:25){
  
  
  
+ 
+# Checking our math
+
+# If we do the math, we can show that
+
+Sn=12+22+32+⋯+n2=n(n+1)(2n+1)/6
+
+# We have already computed the values of SnSn from 1 to 25 using a for loop.
+
+# If the formula is correct then a plot of SnSn versus nn should look cubic.
+
+# Let's make this plot.
+
+# Instructions
+# Define n <- 1:25. Note that with this we can use for(i in n)
+# Use a for loop to save the sums into a vector s_n <- vector("numeric", 25)
+# Plot s_n (on the y-axis) against n (on the x-axis).
 
 
+# Define the function
+compute_s_n <- function(n){
+  x <- 1:n
+  sum(x^2)
+}
+
+# Define the vector of n
+n <- 1:25
+
+# Define the vector to store data
+s_n <- vector("numeric", 25)
+for(i in n){
+  s_n[i] <- compute_s_n(i)
+}
+
+#  Create the plot 
+plot(n,s_n)
+
+
+# Checking our math continued
+
+# Now let's actually check if we get the exact same answer.
+
+# Instructions
+# Confirm that s_n and n(n+1)(2n+1)/6n(n+1)(2n+1)/6 are the same using the identical command.
+
+# Define the function
+compute_s_n <- function(n){
+  x <- 1:n
+  sum(x^2)
+}
+
+# Define the vector of n
+n <- 1:25
+
+# Define the vector to store data
+s_n <- vector("numeric", 25)
+for(i in n){
+  s_n[i] <- compute_s_n(i)
+}
+
+# Check that s_n is identical to the formula given in the instructions.
+identical(s_n, n*(n+1)*(2*n+1)/6)
