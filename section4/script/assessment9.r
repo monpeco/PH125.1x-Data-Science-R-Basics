@@ -100,4 +100,105 @@ altman_plot <- function(x,y){
 }
 
 
+# Lexical scope
+
+# Lexical scoping is a convention used by many languages that determine when an object is available by its name. When you run the code below you will see which x is available when.
+
+x <- 8
+my_func <- function(y){
+    x <- 9
+    print(x)
+    y + x
+}
+my_funct(x)
+print(x)
+
+# Note that when we define x as 9, this is inside the function, but it is 8 after you run the function. The x changed inside the function but not outside.
+
+# Instructions
+# The lexical scoping is a convention used by many languages that determine when an object is available by its name. When you run the code below you will see which x is available when. After running the code below, what is the value of x?
+
+x <- 3
+my_func <- function(y){
+    x <- 5
+    y
+    print(x)
+}
+my_funct(x)
+
+
+# Run this code 
+x <- 3
+    my_func <- function(y){
+    x <- 5
+    y+5
+}
+
+# Print value of x 
+print(x)
+
+
+# For loops
+
+# In the next exercise we are going to write a for-loop. In that for-loop we are going to call a function. We define that function here.
+
+# Instructions
+# Write a function compute_s_n that for any given nn computes the sum Sn=12+22+32+⋯+n2Sn=12+22+32+⋯+n2.
+# Report the value of the sum when n=10.
+# Here is an example of function that adds numbers from 1 to n
+example_func <- function(n){
+    x <- 1:n
+    sum(x)
+}
+
+# Here is the sum of the first 100 numbers
+example_func(100)
+
+# Write a function compute_s_n that with argument n and returns of 1 + 2^2 + ...+ n^2
+compute_s_n <- function(n){
+  val <- 0
+  for(i in 1:n){
+    val <- val + i^2
+  }
+  val
+}
+# Report the value of the sum when n=10
+compute_s_n(10)
+
+
+# For loops continued...
+
+# Now we are going to compute the sum of the squares for several values of nn. We will use a for-loop for this. Here is an example of a for-loop:
+
+results <- vector("numeric", 10)
+n <- 10
+for(i in 1:10){
+    x <- 1:i
+    results[i] <- sum(x)
+}
+
+# Note that we start with a call to vector which constructs an empty vector that we will fill while the loop runs.
+
+# Instructions
+# Define an empty numeric vector s_n of size 25 using s_n <- vector("numeric", 25).
+# Compute the the sum when n is equal to each integer from 1 to 25 using the function we defined in the previous exercise: compute_s_n
+# Save the results in s_n
+
+# Define a function and store it in `compute_s_n`
+compute_s_n <- function(n){
+  x <- 1:n
+  sum(x^2)
+}
+
+# Create a vector for storing results
+s_n <- vector("numeric", 25)
+
+# write a for-loop to store the results in s_n
+for (i in 1:25){
+  s_n[i] <- compute_s_n(i)
+}
+ 
+ 
+ 
+
 
